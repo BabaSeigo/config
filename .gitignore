@@ -1,0 +1,24 @@
+*.DS_Store
+*.pyc
+.idea/*
+*.pdf
+*.csv
+*.tsv
+*.swp
+*.dat
+*.jar
+*.zip
+*.png
+*.xml
+# eclipse関係
+#*.prefs
+#*.resources
+#*.index
+#*.version
+#*.properties
+#*.zip
+#*.log
+#*.lock
+*.classpath
+.metadata/*
+/bin/
