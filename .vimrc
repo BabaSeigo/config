@@ -1,5 +1,11 @@
+set nocompatible
+filetype plugin indent on
+set encoding=utf-8
+scriptencoding
+
+set showcmd
 syntax enable
-set tabstop=4
+set tabstop=2
 set autoindent
 set hlsearch
 " backspaceが効かなくなっていた
