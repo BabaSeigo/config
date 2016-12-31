@@ -138,6 +138,8 @@ set title
 set incsearch
 autocmd QuickFixCmdPost *grep* cwindow
 
+" *で検索して移動しないようにする
+nmap * *N
 
 
 syntax on
