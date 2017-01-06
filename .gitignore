@@ -23,3 +23,5 @@
 *.classpath
 .metadata/*
 /bin/
+*.python-version
+
