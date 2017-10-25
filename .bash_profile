@@ -1,16 +1,36 @@
-alias py='python'
-alias ls='gls --color=auto'
-# eval $(gdircolors ~/Documents/config/dircolors-solarized)
-export PATH="/usr/local/bin":$PATH
-export PATH="/usr/local/sbin:$PATH"
-alias ls='ls -lGwF'
-alias la='ls -alh'
+export PATH="$HOME/.pyenv/bin:$PATH"
+eval "$(pyenv init -)"
+
+
+export PYTHONPATH="/Users/babaseigou/Documents/pyWorkSpace/":$PYTHONPATH
+
+# Get the aliases and functions
+if [ -f ~/.bashrc ]; then
+	. ~/.bashrc
+fi
+
+
+
+set -o vi
+set -o noclobber
+export PROMPT_COMMAND='echo -ne "\033];${PWD##*/}\007"'
+export LSCOLORS=gxfxcxdxbxegedabagacad
+alias grep='grep --color'
+alias diff='vimdiff'
 alias mv='mv -i'
 alias rm='rm -i'
 alias cp='cp -i'
-
-# itermのタブにdirを表示
-export PROMPT_COMMAND='echo -ne "\033];${PWD##*/}\007"'
-#echo -ne "\033]0;$(pwd | rev | awk -F \/ '{print "/"$1"/"$2}'| rev)\007"
-export PATH="$HOME/.pyenv/bin:$PATH"
-eval "$(pyenv init -)"
+alias py='python'
+alias h='history'
+alias vimbash='vim $HOME/.bash_profile'
+alias sourcebash='source $HOME/.bash_profile'
+alias nkfsjis='nkf -w --overwrite -s'
+alias nkfutf='nkf -w --overwrite'
+alias ls='ls -lGwFt'
+alias la='ls -alht'
+# alias vimsnippets='vim /Users/s-baba/.vim/bundle/neosnippet-snippets/neosnippets/sql.snip'
+alias less='/usr/local/share/vim/vim74/macros/less.sh'
+function gitinit(){
+	git init
+	wget 'https://raw.githubusercontent.com/BabaSeigo/config/master/.gitignore'
+}
