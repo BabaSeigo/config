@@ -25,4 +25,4 @@
 /bin/
 *.python-version
 *.xlsx
-
+/**/*tmp/*
