@@ -2,7 +2,10 @@ export PATH="$HOME/.pyenv/bin:$PATH"
 eval "$(pyenv init -)"
 
 
-export PYTHONPATH="/Users/babaseigou/Documents/pyWorkSpace/":$PYTHONPATH
+# export PYTHONPATH="/Users/babaseigou/Documents/pyWorkSpace/":$PYTHONPATH
+findpy(){
+  find $1 -name "*.py" | xargs grep --color -n $2
+}
 
 # Get the aliases and functions
 if [ -f ~/.bashrc ]; then
